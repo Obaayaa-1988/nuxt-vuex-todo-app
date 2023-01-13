@@ -12,5 +12,17 @@ export const mutations = {
         state.todos = [{ content : todo, completed: false}, ...state.todos]
         // state.todos.push({ content: todo, completed: false}) another option to add an object to an array
         // state.todos.unshift({ content: todo, completed: false}) another option to add an object to an array
+    },
+
+    REMOVE_TODO(state, todo) {
+        state.todos.splice(state.todos.indexOf(todo), 1);
+
+
+    },
+
+    TOGGLE_TODO(state, todo) {
+        todo.completed = !todo.completed
     }
+
+
 }
