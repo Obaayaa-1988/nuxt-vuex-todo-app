@@ -1,5 +1,7 @@
 <template>
-  <Tutorial/>
+  <div>
+    <h1 class="text-green-600">Hello World</h1>
+  </div>
 </template>
 
 <script>
