@@ -20,6 +20,21 @@
 
 <script>
 export default {
-  name: 'IndexPage'
+  name: 'IndexPage',
+
+  data (){
+    return {
+      newTodo: ""
+    }
+  },
+
+  method: {
+    addTodo (){
+      if(this.newTodo) {
+        this.$store.commit('ADD_TODO', this.newTodo);
+        this.newTodo = "";
+      }
+    }
+  }
 }
 </script>
