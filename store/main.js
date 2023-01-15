@@ -1,8 +1,8 @@
 export const state =() => ({
     todos: [
         {
-            content: " travel to australia melbourne my favorite city in the world",
-            completed : false,
+            // content: " travel to australia melbourne my favorite city in the world",
+            // completed : false,
         }
     ]
 })

@@ -11,6 +11,7 @@
 
       <div> 
         <!----component-->
+        {{ $store.state.todos }}
       </div>
       
     </main>
@@ -28,7 +29,7 @@ export default {
     }
   },
 
-  method: {
+  methods: {
     addTodo (){
       if(this.newTodo) {
         this.$store.commit('ADD_TODO', this.newTodo);
