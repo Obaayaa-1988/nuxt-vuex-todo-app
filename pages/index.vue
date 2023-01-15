@@ -25,17 +25,19 @@ export default {
 
   data (){
     return {
-      newTodo: ""
+      newTodo: ''
     }
   },
 
   methods: {
-    addTodo (){
-      if(this.newTodo) {
-        this.$store.commit('ADD_TODO', this.newTodo);
-        this.newTodo = "";
-      }
+   addTodo(){
+    if(this.newTodo){
+      this.$store.commit('ADD_TODO', this.newTodo)
+      this.newTodo = '';
+
     }
+
+   }
   }
 }
 </script>
