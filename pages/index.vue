@@ -1,35 +1,37 @@
 <template>
   <div>
-    <main class=" h-screen">
-      <div class="flex justify-center"> 
+    <main >
+      <div class="flex justify-between">
+      
 
-        <div class=" ">
-          <img src="images/todo.svg.svg" alt="PanCake" class=" object-cover " />
-        
+          <div class=" mx-auto pt-16 ">
+            <img src="images/todo.svg.svg" alt="PanCake" class=" object-cover w-full  " />
+          
+          </div>
+
+
+
+        <div class="bg-indigo-500 w-2/4 h-screen text-center rounded-l-lg">
+          <div class=" text-white">
+            <h1 class="text-2xl font-bold py-12">TODO  LIST</h1>
+            <!-- <p>Create a list of todos</p> -->
+          
+          </div>
+
+          <div class="">
+            <input type="text" v-model="newTodo" placeholder="add a new todo" @keypress.enter="addTodo" class="h-12 w-2/3 rounded md outline-none pl-2" />
+            <button @click="addTodo" class="bg-black text-white py-3 px-8 rounded">add</button>
+          </div>
+    
+
         </div>
 
-        
-        <!-- <div> 
-          <h1>Task Board</h1>
-          <p>Create a list of todos</p>
-
-        </div> -->
-
-        <div>
-          <input type="text" v-model="newTodo" placeholder="add a new todo" @keypress.enter="addTodo" class="border-4 border-indigo-600" />
-          <button @click="addTodo">add</button>
-        </div>
-  
   
 
-
-      <div> 
-        <!----component-->
-        {{ $store.state.todos }}
       </div>
       
+      
     </main>
-
   </div>
 </template>
 
@@ -54,4 +56,7 @@ export default {
    }
   }
 }
+
+
+
 </script>
