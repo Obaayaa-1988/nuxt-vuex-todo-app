@@ -23,6 +23,9 @@
   
 
 
+      <div> 
+        <!----component-->
+        {{ $store.state.todos }}
       </div>
       
     </main>
@@ -32,6 +35,23 @@
 
 <script>
 export default {
-  name: 'IndexPage'
+  name: 'IndexPage',
+
+  data (){
+    return {
+      newTodo: ''
+    }
+  },
+
+  methods: {
+   addTodo(){
+    if(this.newTodo){
+      this.$store.commit('ADD_TODO', this.newTodo)
+      this.newTodo = '';
+
+    }
+
+   }
+  }
 }
 </script>
